@@ -158,13 +158,13 @@ Estas son las funcionalidades sin las cuales EasyPark no puede existir como sist
 
 | ID | Funcionalidad | PoC |
 |---|---|---|
-| **CU-009-RF1** | Buscar parqueaderos por GPS en radio de 1 km | ✅ Sí |
-| **CU-010-RF1** | Registrar placa, tipo de vehículo y periodo de entrada/salida | ❌ No |
-| **CU-010-RF3** | Asignar celda y generar comprobante con código QR | ✅ Sí |
-| **CU-011-RF3** | Liberar espacio automáticamente si no se paga a tiempo | ✅ Sí — requiere jobs/watchers |
-| **CU-011-RF4** | Notificar al usuario el estado de su reserva | ✅ Sí |
-| **CU-013-RF1** | Pago seguro mediante Mercado Pago | ✅ Sí — requiere integración API |
-| **CU-014-RF1** | Factura con código QR para verificar identidad | ✅ Sí |
+| **CU-009-RF1** | Buscar parqueaderos por GPS en radio de 1 km |  Sí |
+| **CU-010-RF1** | Registrar placa, tipo de vehículo y periodo de entrada/salida |  No |
+| **CU-010-RF3** | Asignar celda y generar comprobante con código QR |  Sí |
+| **CU-011-RF3** | Liberar espacio automáticamente si no se paga a tiempo |  Sí — requiere jobs/watchers |
+| **CU-011-RF4** | Notificar al usuario el estado de su reserva |  Sí |
+| **CU-013-RF1** | Pago seguro mediante Mercado Pago |  Sí — requiere integración API |
+| **CU-014-RF1** | Factura con código QR para verificar identidad |  Sí |
 
 ---
 
@@ -245,57 +245,57 @@ Los atributos de calidad se priorizaron mediante un **mapa de empatía** con los
 
 | Herramienta | Estado | Por qué se eligió |
 |---|---|---|
-| **Angular 17** | ✅ Seleccionado | Estructura organizada, tipado fuerte con TypeScript, ideal para manejar el mapa y las reservas en tiempo real |
-| React.js | ❌ No seleccionado | Se priorizó la robustez estructural de Angular sobre la flexibilidad de React |
+| **Angular 17** |  Seleccionado | Estructura organizada, tipado fuerte con TypeScript, ideal para manejar el mapa y las reservas en tiempo real |
+| React.js |  No seleccionado | Se priorizó la robustez estructural de Angular sobre la flexibilidad de React |
 
 ### Backend
 
 | Herramienta | Estado | Por qué se eligió |
 |---|---|---|
-| **Spring Boot 3.3** | ✅ Seleccionado | El equipo lo conoce bien, tiene todo lo que EasyPark necesita (seguridad, WebSocket, JPA) y se adapta perfectamente a la arquitectura hexagonal |
-| Node.js | ❌ No seleccionado | El equipo tiene mayor experiencia en Java |
-| Django | ❌ No seleccionado | El equipo no tiene experiencia en Python |
+| **Spring Boot 3.3** |  Seleccionado | El equipo lo conoce bien, tiene todo lo que EasyPark necesita (seguridad, WebSocket, JPA) y se adapta perfectamente a la arquitectura hexagonal |
+| Node.js |  No seleccionado | El equipo tiene mayor experiencia en Java |
+| Django |  No seleccionado | El equipo no tiene experiencia en Python |
 
 ### Hosting
 
 | Herramienta | Estado | Por qué se eligió |
 |---|---|---|
-| **Railway** | ✅ Seleccionado | Fácil de configurar, costos accesibles para un proyecto académico, soporte integrado para PostgreSQL y Redis |
-| AWS | ❌ No seleccionado | Pago por uso impredecible, curva de aprendizaje muy alta |
-| Google Cloud / Azure | ❌ No seleccionado | Más complejo y costoso para la etapa actual del proyecto |
+| **Railway** |  Seleccionado | Fácil de configurar, costos accesibles para un proyecto académico, soporte integrado para PostgreSQL y Redis |
+| AWS |  No seleccionado | Pago por uso impredecible, curva de aprendizaje muy alta |
+| Google Cloud / Azure |  No seleccionado | Más complejo y costoso para la etapa actual del proyecto |
 
 ### Base de Datos
 
 | Herramienta | Estado | Por qué se eligió |
 |---|---|---|
-| **PostgreSQL 17** | ✅ Seleccionado | Open source, robusto, el equipo ya tiene experiencia y garantiza integridad con transacciones ACID |
-| OracleSQL | ❌ No seleccionado | Costo muy alto si el sistema crece |
-| NoSQL | ❌ No seleccionado | Puede ocasionar duplicidad de información; la flexibilidad que ofrece no es necesaria para EasyPark |
+| **PostgreSQL 17** |  Seleccionado | Open source, robusto, el equipo ya tiene experiencia y garantiza integridad con transacciones ACID |
+| OracleSQL |  No seleccionado | Costo muy alto si el sistema crece |
+| NoSQL |  No seleccionado | Puede ocasionar duplicidad de información; la flexibilidad que ofrece no es necesaria para EasyPark |
 
 ### Otras tecnologías clave
 
 | Tecnología | Estado | Qué hace en EasyPark |
 |---|---|---|
-| **Redis** | ✅ Seleccionado | Caché de disponibilidad y bloqueo distribuido de celdas (mutex de 5 minutos para evitar doble reserva) |
-| **Spring Security + JWT** | ✅ Seleccionado | Autenticación stateless y control de acceso por rol |
-| **GitHub Actions** | ✅ Seleccionado | CI/CD: pruebas automáticas en cada cambio de código |
-| **WebSocket (STOMP)** | ✅ Seleccionado | Actualización del mapa en tiempo real sin que el usuario recargue |
-| **Firebase Cloud Messaging** | ✅ Seleccionado | Notificaciones push gratuitas a conductores y propietarios |
-| **Mercado Pago** | ✅ Seleccionado | Pasarela de pagos líder en Colombia y Latinoamérica |
-| **Google Maps Platform** | ✅ Seleccionado | Mapa interactivo con geolocalización precisa |
-| REST API | ❌ No seleccionado | No permite actualizaciones en tiempo real; el usuario tendría que recargar constantemente |
-| Stripe | ❌ No seleccionado | Poco conocido en Colombia, genera desconfianza a la hora de pagar |
+| **Redis** |  Seleccionado | Caché de disponibilidad y bloqueo distribuido de celdas (mutex de 5 minutos para evitar doble reserva) |
+| **Spring Security + JWT** |  Seleccionado | Autenticación stateless y control de acceso por rol |
+| **GitHub Actions** |  Seleccionado | CI/CD: pruebas automáticas en cada cambio de código |
+| **WebSocket (STOMP)** |  Seleccionado | Actualización del mapa en tiempo real sin que el usuario recargue |
+| **Firebase Cloud Messaging** |  Seleccionado | Notificaciones push gratuitas a conductores y propietarios |
+| **Mercado Pago** |  Seleccionado | Pasarela de pagos líder en Colombia y Latinoamérica |
+| **Google Maps Platform** |  Seleccionado | Mapa interactivo con geolocalización precisa |
+| REST API |  No seleccionado | No permite actualizaciones en tiempo real; el usuario tendría que recargar constantemente |
+| Stripe |  No seleccionado | Poco conocido en Colombia, genera desconfianza a la hora de pagar |
 
 ### Estilos arquitectónicos aplicados
 
 | Arquitectura | Estado | Por qué se aplica en EasyPark |
 |---|---|---|
-| **Hexagonal (Ports & Adapters)** | ✅ Aplicada | La lógica de negocio vive en el centro, aislada de la base de datos y los servicios externos. Si mañana cambia Mercado Pago, solo se cambia el adaptador |
-| **En Capas** | ✅ Aplicada | Presentación → lógica de negocio → acceso a datos. Cada capa tiene su responsabilidad clara |
-| **Microservicios** | ✅ Aplicada | Módulos independientes: usuarios, reservas, pagos, disponibilidad |
-| **Event-Driven** | ✅ Aplicada | Reserva → notificación → actualización del mapa como cadena de eventos desacoplados |
-| **API-First** | ✅ Aplicada | Los endpoints se diseñaron pensando en Angular desde el inicio |
-| **Contenedores (Docker)** | ✅ Aplicada | Consistencia entre entornos de desarrollo y producción |
+| **Hexagonal (Ports & Adapters)** |  Aplicada | La lógica de negocio vive en el centro, aislada de la base de datos y los servicios externos. Si mañana cambia Mercado Pago, solo se cambia el adaptador |
+| **En Capas** |  Aplicada | Presentación → lógica de negocio → acceso a datos. Cada capa tiene su responsabilidad clara |
+| **Microservicios** |  Aplicada | Módulos independientes: usuarios, reservas, pagos, disponibilidad |
+| **Event-Driven** |  Aplicada | Reserva → notificación → actualización del mapa como cadena de eventos desacoplados |
+| **API-First** |  Aplicada | Los endpoints se diseñaron pensando en Angular desde el inicio |
+| **Contenedores (Docker)** |  Aplicada | Consistencia entre entornos de desarrollo y producción |
 
 ---
 
@@ -474,7 +474,7 @@ easy-park-frontend/
 
 ### Requisitos previos
 
-- Java 21 (OpenJDK)
+- Java 26 (OpenJDK)
 - PostgreSQL 17 corriendo en el puerto `5432`
 - Redis corriendo en el puerto `6379`
 - Eclipse IDE + Spring Tools 4 (para el backend)
